@@ -1,0 +1,79 @@
+[
+  [
+    0,
+    8,
+    "Incontro Dipartimentale",
+    "Wed, 01 Jun 2011 00:00:00 GMT",
+    4
+  ],
+  [
+    1,
+    8,
+    "Didattica",
+    "Tue, 15 Mar 2011 00:00:00 GMT",
+    8
+  ],
+  [
+    2,
+    8,
+    "Incontro Dipartimentale",
+    "Wed, 15 Jun 2011 00:00:00 GMT",
+    4
+  ],
+  [
+    3,
+    2,
+    "Didattica",
+    "Tue, 01 Apr 2014 00:00:00 GMT",
+    4
+  ],
+  [
+    4,
+    2,
+    "Didattica",
+    "Thu, 03 Apr 2014 00:00:00 GMT",
+    4
+  ],
+  [
+    5,
+    1,
+    "Didattica",
+    "Thu, 03 Apr 2014 00:00:00 GMT",
+    8
+  ],
+  [
+    6,
+    4,
+    "Incontro Accademico",
+    "Sun, 25 Nov 2012 00:00:00 GMT",
+    7
+  ],
+  [
+    7,
+    7,
+    "Missione",
+    "Sun, 07 Jul 2013 00:00:00 GMT",
+    3
+  ],
+  [
+    8,
+    5,
+    "Altro",
+    "Sat, 15 Dec 2012 00:00:00 GMT",
+    6
+  ],
+  [
+    9,
+    0,
+    "Didattica",
+    "Wed, 18 Apr 2012 00:00:00 GMT",
+    4
+  ],
+  [
+    10,
+    6,
+    "Didattica",
+    "Sat, 07 May 2011 00:00:00 GMT",
+    7
+  ]
+]

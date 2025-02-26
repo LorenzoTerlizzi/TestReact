@@ -1,0 +1,68 @@
+[
+  [
+    0,
+    10,
+    "Malattia",
+    "Wed, 01 Jun 2011 00:00:00 GMT"
+  ],
+  [
+    1,
+    10,
+    "Malattia",
+    "Thu, 02 Jun 2011 00:00:00 GMT"
+  ],
+  [
+    2,
+    10,
+    "Malattia",
+    "Fri, 03 Jun 2011 00:00:00 GMT"
+  ],
+  [
+    3,
+    10,
+    "Maternita",
+    "Sat, 04 Jun 2011 00:00:00 GMT"
+  ],
+  [
+    4,
+    8,
+    "Malattia",
+    "Sat, 02 Jul 2011 00:00:00 GMT"
+  ],
+  [
+    5,
+    19,
+    "Chiusura Universitaria",
+    "Sat, 29 Jun 2013 00:00:00 GMT"
+  ],
+  [
+    6,
+    7,
+    "Malattia",
+    "Fri, 07 Dec 2012 00:00:00 GMT"
+  ],
+  [
+    7,
+    0,
+    "Maternita",
+    "Sun, 27 Oct 2013 00:00:00 GMT"
+  ],
+  [
+    8,
+    17,
+    "Chiusura Universitaria",
+    "Mon, 15 Aug 2011 00:00:00 GMT"
+  ],
+  [
+    9,
+    15,
+    "Maternita",
+    "Sun, 12 Dec 2010 00:00:00 GMT"
+  ],
+  [
+    10,
+    0,
+    "Malattia",
+    "Wed, 18 Apr 2012 00:00:00 GMT"
+  ]
+]

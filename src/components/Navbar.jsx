@@ -28,4 +28,3 @@ const CustomNavbar = () => {
 };
 
 export default CustomNavbar;
-// bg="light" expand="lg"  7

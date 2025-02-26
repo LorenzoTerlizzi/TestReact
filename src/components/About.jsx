@@ -8,7 +8,7 @@ const About = () => {
         <Card.Body>
           <Card.Title>About</Card.Title>
           <Card.Text>
-            This is a simple React app with React Bootstrap and REST API integration.
+            Questa applicazione è stata sviluppata come esame di Web 2. 
           </Card.Text>
         </Card.Body>
       </Card>

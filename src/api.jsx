@@ -8,7 +8,7 @@ export const fetchUsers = async () => {
     return response.data;
   } catch (error) {
     console.error('Error fetching users:', error);
-    return [];
+    return []; 
   }
 };
 

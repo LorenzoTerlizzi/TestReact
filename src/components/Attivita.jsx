@@ -1,47 +1,4 @@
-// import React, { useEffect, useState } from 'react';
-// import { Container, Table } from 'react-bootstrap';
-// import { fetchAttivita } from '../api';
 
-// const Attivita = () => {
-//   const [works, setWork] = useState([]);
-  
-//     useEffect(() => {
-//       const getWork = async () => {
-//         const data = await fetchAttivita();
-//         setWork(data);
-//       };
-//       getWork();
-//     }, []);
-//   return (
-//     <Container className="mt-4">
-//     <h1>Attivita non proggetuali</h1>
-//       <Table striped bordered hover variant="info">
-//         <thead>
-//           <tr>
-//             <th>Giorno</th>
-//             <th>Id</th>
-//             <th>Ore durata</th>
-//             <th>Persone</th>
-//             <th>Tipo</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {works.map(work => (
-//             <tr key={work.id}>
-//               <td>{work.giorno}</td>
-//               <td>{work.id}</td>
-//               <td>{work.oredurata}</td>
-//               <td>{work.persona}</td>
-//               <td>{work.tipo}</td>
-//             </tr>
-//           ))}
-//         </tbody>
-//       </Table>
-//     </Container>
-//   );
-// };
-
-// export default Attivita;
 import React, { useEffect, useState, useMemo } from 'react';
 import { Container, Table, Form } from 'react-bootstrap';
 import { fetchAttivita } from '../api';
@@ -96,11 +53,12 @@ const Attivita = () => {
     return sortedWorks.filter((work) => {
       const search = searchTerm.toLowerCase();
       return (
-        work.giorno.toLowerCase().includes(search) ||
         work.id.toString().includes(search) ||
-        work.oredurata.toString().includes(search) ||
         work.persona.toLowerCase().includes(search) ||
-        work.tipo.toLowerCase().includes(search)
+        work.tipo.toLowerCase().includes(search) ||
+        work.giorno.toLowerCase().includes(search) ||
+        work.oredurata.toString().includes(search) 
+        
       );
     });
   }, [sortedWorks, searchTerm]);
@@ -125,21 +83,21 @@ const Attivita = () => {
       <Table striped bordered hover variant="info">
         <thead>
           <tr>
-            <th onClick={() => handleSort('giorno')}>Giorno{getSortIndicator('giorno')}</th>
-            <th onClick={() => handleSort('id')}>Id{getSortIndicator('id')}</th>
-            <th onClick={() => handleSort('oredurata')}>Ore durata{getSortIndicator('oredurata')}</th>
+            <th onClick={() => handleSort('id')}>ID{getSortIndicator('id')}</th>
             <th onClick={() => handleSort('persona')}>Persone{getSortIndicator('persona')}</th>
             <th onClick={() => handleSort('tipo')}>Tipo{getSortIndicator('tipo')}</th>
+            <th onClick={() => handleSort('giorno')}>Giorno{getSortIndicator('giorno')}</th>
+            <th onClick={() => handleSort('oredurata')}>Ore durata{getSortIndicator('oredurata')}</th>
           </tr>
         </thead>
         <tbody>
           {filteredWorks.map((work) => (
             <tr key={work.id}>
-              <td>{work.giorno}</td>
               <td>{work.id}</td>
-              <td>{work.oredurata}</td>
               <td>{work.persona}</td>
               <td>{work.tipo}</td>
+              <td>{work.giorno}</td>
+              <td>{work.oredurata}</td>
             </tr>
           ))}
         </tbody>

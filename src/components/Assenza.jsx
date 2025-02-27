@@ -131,19 +131,19 @@ const Assenza = () => {
       <Table striped bordered hover variant="info">
         <thead>
           <tr>
-            <th onClick={() => handleSort('giorno')}>Giorno{getSortIndicator('giorno')}</th>
-            <th onClick={() => handleSort('id')}>Id{getSortIndicator('id')}</th>
-            <th onClick={() => handleSort('persona')}>Persona{getSortIndicator('persona')}</th>
-            <th onClick={() => handleSort('tipo')}>Tipo{getSortIndicator('tipo')}</th>
+            <th onClick={() => handleSort('id')}>ID{getSortIndicator('giorno')}</th>
+            <th onClick={() => handleSort('persona')}>Persona{getSortIndicator('id')}</th>
+            <th onClick={() => handleSort('tipo')}>Tipo{getSortIndicator('persona')}</th>
+            <th onClick={() => handleSort('giorno')}>Giorno{getSortIndicator('tipo')}</th>
           </tr>
         </thead>
         <tbody>
           {filteredPosts.map((post) => (
             <tr key={post.id}>
-              <td>{post.giorno}</td>
               <td>{post.id}</td>
               <td>{post.persona}</td>
               <td>{post.tipo}</td>
+              <td>{post.giorno}</td>
             </tr>
           ))}
         </tbody>

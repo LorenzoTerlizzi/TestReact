@@ -160,25 +160,25 @@ def StampaPersone():
         try:
             with open("persone.json", "r", encoding="utf-8") as file:
                 data = json.load(file)
-            result = [{"nome": person[0], "cognome": person[1]} for person in data]
+            result = [{"nome": item[1], "cognome": item[0], "posizione": item[2], "stipendio": item[3]} for item in data]
             return jsonify(result)
         except Exception as e:
             return jsonify({'error': f'Errore nella lettura del file JSON: {str(e)}'}), 500
     
     if query_type == "query 2":
         try:
-            with open("attivita.json", "r", encoding="utf-8") as file:
+            with open("attivitanProg.json", "r", encoding="utf-8") as file:
                 data = json.load(file)
-            result = [{"id": item[0], "descrizione": item[1]} for item in data]
+            result = [{"id": item[0], "giorno": item[1], "oredurata": item[2], "persona": item[3], "tipo": item[4]} for item in data]
             return jsonify(result)
         except Exception as e:
             return jsonify({'error': f'Errore nella lettura del file JSON: {str(e)}'}), 500
     
     if query_type == "query 3":
         try:
-            with open("wp.json", "r", encoding="utf-8") as file:
+            with open("assenze.json", "r", encoding="utf-8") as file:
                 data = json.load(file)
-            result = [{"id": item[0], "descrizione": item[1]} for item in data]
+            result = [{"id": item[0], "persona": item[1], "tipo": item[2], "giorno": item[3]} for item in data]
             return jsonify(result)
         except Exception as e:
             return jsonify({'error': f'Errore nella lettura del file JSON: {str(e)}'}), 500
@@ -186,12 +186,8 @@ def StampaPersone():
     connection = ConnectDB()
     try:
         cursor = connection.cursor()
-        if query_type == "query 4":
-            query = "SELECT * FROM assenza;"
-        else:
-            return jsonify({'error': 'Selezione non valida'}), 400
         
-        cursor.execute(query)
+        cursor.execute()
         columns = [desc[0] for desc in cursor.description]
         records = cursor.fetchall()
         result = [dict(zip(columns, row)) for row in records]
@@ -201,4 +197,4 @@ def StampaPersone():
     return jsonify(result) 
 
 if __name__ == '__main__':
-    api.run(host="127.0.0.1", port=8080, debug=True)
+    api.run(host="127.0.0.1", port=5010, debug=True)

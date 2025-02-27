@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080'//'https://jsonplaceholder.typicode.com';
+const API_BASE_URL = 'http://localhost:5010'//'https://jsonplaceholder.typicode.com';
 
 export const fetchUsers = async () => {
   try {
@@ -14,7 +14,7 @@ export const fetchUsers = async () => {
 
 export const fetchPosts = async () => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/persone?selezione=query+4`);
+    const response = await axios.get(`${API_BASE_URL}/persone?selezione=query+3`);
     return response.data;
   } catch (error) {
     console.error('Error fetching posts:', error);

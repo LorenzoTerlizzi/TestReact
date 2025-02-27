@@ -31,7 +31,7 @@ Questo progetto è stato sviluppato per l'esame del modulo di WEB 2, composto da
 ## Installazione  Backend
 
 1. Clonare la repository:
-- git clone ...
+- git clone https://github.com/LorenzoTerlizzi/TestReact.git
 
 2. Scaricare le dipendenze:
 - sudo apt install python3-pip
